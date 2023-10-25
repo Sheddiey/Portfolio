@@ -11,10 +11,7 @@ export function Main() {}
 
 export function Home() {
   return (
-    <div
-      className="card grid md:place-content-evenly justify-items-center justify-center content-center md:flex"
-      id="main"
-    >
+    <div className="card regal-blue flex content-center" id="main">
       <section className="order-last md:grid md:content-center md:-order-1">
         <Socials />
       </section>
@@ -71,9 +68,29 @@ function Socials() {
   );
 }
 
-export function About() {}
+export function About() {
+  return (
+    <div className="about p-2 grid  justify-center card text-center" id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm an experienced Front-End Developer with a proven track record of
+        optimizing codebases for reusability at Milkyway Coop, and I'm eager to
+        apply my skills to a larger development team at TnC. My passion for
+        learning and solving complex problems drives me to maximize user
+        efficiency. With a keen eye for design and a love for creating visually
+        appealing, user-friendly web experiences, I turn ideas into reality
+        through code. My mission is to continuously find innovative ways to
+        enhance the digital world and make the web a more beautiful and
+        functional place. I'm excited to connect with like-minded individual's
+        and explore new opportunities for collaboration.
+      </p>
+    </div>
+  );
+}
 
-export function Skills() {}
+export function Skills() {
+    
+}
 
 export function Services() {}
 

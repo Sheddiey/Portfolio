@@ -1,10 +1,10 @@
 import React from "react";
+import { Home } from "./Main";
 
 export function Portfolio() {
   return (
-    <div className="h-screen">
+    <div className=" h-screen">
       <NavBar />
-      <Main />
       <Footer />
     </div>
   );
@@ -12,7 +12,7 @@ export function Portfolio() {
 
 function NavBar() {
   return (
-    <nav className="flex regal-blue box-shadow p-3 justify-between">
+    <nav className=" flex regal-blue box-shadow p-3 justify-between">
       <h2 className="cursor-pointer">Sheddiey</h2>
       <ul className="flex cursor-pointer gap-5">
         <li>Home</li>
@@ -26,7 +26,9 @@ function NavBar() {
   );
 }
 
-function Main() {}
+function Main() {
+  return <Home />;
+}
 
 function Footer() {
   return (
