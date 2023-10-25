@@ -89,7 +89,22 @@ export function About() {
 }
 
 export function Skills() {
-    
+  return (
+    <div className="skills p-5 card" id="skills">
+      <h2>Proficiencies</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Responsive Web Design</li>
+        <li>Web Accessibility</li>
+        <li>Front-end Frameworks - React</li>
+        <li>Version Control - Git</li>
+        <li>CSS Frameworks - Bootstrap</li>
+        <li>Mobile-First Development</li>
+      </ul>
+    </div>
+  );
 }
 
 export function Services() {}
