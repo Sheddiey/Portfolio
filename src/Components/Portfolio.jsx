@@ -2,10 +2,10 @@ import React from "react";
 
 export function Portfolio() {
   return (
-    <div>
-        <NavBar />
-        <Main />
-        <Footer />
+    <div className="h-screen">
+      <NavBar />
+      <Main />
+      <Footer />
     </div>
   );
 }
@@ -13,21 +13,27 @@ export function Portfolio() {
 function NavBar() {
   return (
     <nav className="flex regal-blue box-shadow p-3 justify-between">
-        <h2 className="cursor-pointer">Sheddiey</h2>
-        <ul className="flex cursor-pointer gap-5">
-            <li>Home</li>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Services</li>
-            <li>Projects</li>
-            <li>Contact Me</li>
-        </ul>
+      <h2 className="cursor-pointer">Sheddiey</h2>
+      <ul className="flex cursor-pointer gap-5">
+        <li>Home</li>
+        <li>About</li>
+        <li>Skills</li>
+        <li>Services</li>
+        <li>Projects</li>
+        <li>Contact Me</li>
+      </ul>
     </nav>
   );
 }
 
-function Main() {
+function Main() {}
 
+function Footer() {
+  return (
+    <div className="bottom-0 fixed w-screen h-10">
+      <p className="text-center cursor-pointer opacity-75 hover:opacity-100 transition-opacity">
+        © Sheddiey 2023. All rights reserved.
+      </p>
+    </div>
+  );
 }
-
-function Footer() {}
