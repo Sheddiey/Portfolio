@@ -5,6 +5,9 @@ import {
   faLinkedinIn,
   faWhatsapp,
   faGithub,
+  faPhone,
+  faEnvelope,
+  faLocationDot
 } from "@fortawesome/free-brands-svg-icons";
 
 export function Main() {}
@@ -124,4 +127,44 @@ export function Projects() {
   );
 }
 
-export function ContactMe() {}
+export function ContactMe() {
+  return (
+    <div className="contact-me  p-5 grid md:flex card" id="contact-me">
+      <div className=" contact-left order-last grid gap-5">
+        <p>
+          <span>
+            <FontAwesomeIcon icon={faPhone} />
+          </span>{" "}
+          +254 711 241 878
+        </p>
+        <p>
+          <span>
+            <FontAwesomeIcon icon={faEnvelope} />
+          </span>{" "}
+          shadrackcheruiyot429@gmail.com
+        </p>
+        <p>
+          <span>
+            <FontAwesomeIcon icon={faLocationDot} />
+          </span>{" "}
+          Remote{" "}
+        </p>
+      </div>
+      <div className="contact-right md:gap-5 grid gap-2">
+        <label>
+          Full Name:
+          <input placeholder="Full name" />
+        </label>
+        <label>
+          Email:
+          <input placeholder="Email" />
+        </label>
+        <label>
+          What type of website do you need?
+          <input placeholder="Provide a brief description..." />
+        </label>
+        <button className="button">Send Message</button>
+      </div>
+    </div>
+  );
+}
