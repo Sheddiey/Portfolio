@@ -17,7 +17,8 @@ export function Home() {
       </section>
       <section className="flex flex-col text-center justify-evenly">
         <h2>
-          Hello, I am <span className="font-medium text-4xl">Shadrack Cheruiyot</span>{" "}
+          Hello, I am{" "}
+          <span className="font-medium text-4xl">Shadrack Cheruiyot</span>{" "}
         </h2>
         <h5>
           I am a passionate front-end developer with a keen eye for design and a
@@ -70,7 +71,10 @@ function Socials() {
 
 export function About() {
   return (
-    <div className="card regal-blue p-2 grid gap-5 content-center justify-center card text-center" id="about">
+    <div
+      className="card regal-blue p-2 grid gap-5 content-center justify-center card text-center"
+      id="about"
+    >
       <h2 className="font-medium text-4xl">About Me</h2>
       <p>
         I'm an experienced Front-End Developer with a proven track record of
@@ -107,6 +111,17 @@ export function Skills() {
   );
 }
 
-export function Projects() {}
+export function Projects() {
+  return (
+    <div id="projects" className="projects card">
+      <ul>
+        <li>lorem20</li>
+        <li>lorem20</li>
+        <li>lorem20</li>
+        <li>lorem20</li>
+      </ul>
+    </div>
+  );
+}
 
 export function ContactMe() {}
