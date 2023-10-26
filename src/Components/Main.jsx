@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faXTwitter,
@@ -11,13 +11,13 @@ export function Main() {}
 
 export function Home() {
   return (
-    <div className="card regal-blue flex content-center" id="main">
+    <div className="card regal-blue flex gap-5" id="main">
       <section className="order-last md:grid md:content-center md:-order-1">
         <Socials />
       </section>
-      <section className="intro-description">
+      <section className="flex flex-col text-center justify-evenly">
         <h2>
-          Hello, I am <span>Shadrack Cheruiyot</span>{" "}
+          Hello, I am <span className="font-medium text-4xl">Shadrack Cheruiyot</span>{" "}
         </h2>
         <h5>
           I am a passionate front-end developer with a keen eye for design and a
@@ -105,91 +105,6 @@ export function Skills() {
       </ul>
     </div>
   );
-}
-
-export function Services() {
-    const data = {
-        services: [
-          {
-            id: 1,
-            h2: "Website Development",
-            li_1: "Intuitively Designed Ui",
-            li_2: "User-Friendly Navigation",
-            li_3: "Responsiveness Accross All Devices",
-            li_4: "SEO optimization",
-          },
-          {
-            id: 2,
-            h2: "Custom Software Development",
-            li_1: "User-Friendly",
-            li_2: "Efficient",
-            li_3: "Scalable",
-            li_4: "Secure and Reliable",
-          },
-          {
-            id: 3,
-            h2: "Website and Platform Maintenance",
-            li_1: "Effective Assistance",
-            li_2: "Uninterrupted Accessibility",
-            li_3: "Thorough Focus",
-            li_4: "Resolution - Focused Approach",
-          },
-        ],
-      };
-      const [activeService, setActiveService] = useState (0);
-      const [isAnimating, setIsAnimating] = useState(false);
-    
-      const nextService = () => {
-        if (!isAnimating) {
-          setIsAnimating(true);
-          setTimeout(() => {
-            setActiveService((activeService + 1) % data.services.length);
-            setIsAnimating(false);
-          }, 600);
-        }
-      };
-    
-      const prevService = () => {
-        if (!isAnimating) {
-          setIsAnimating(true);
-          setTimeout(() => {
-            setActiveService(
-              (activeService - 1 + data.services.length) % data.services.length
-            );
-            setIsAnimating(false);
-          }, 0);
-        }
-      };
-    
-      return (
-        <section className="section card">
-          <div className="header">
-            <h1>Services</h1>
-            <h4>Whats In It For You.</h4>
-          </div>
-    
-          <div
-            className={`services relative group flip-card ${
-              isAnimating ? "flipped" : ""
-            }`}
-            id="services"
-          >
-            <Carousel {...data.services[activeService]} />
-            <div
-              onClick={prevService}
-              className="hidden group-hover:block absolute top-[30%] -translate-x-0 -translate-y-[-50%] left-5 text-2xl rounded-full p-1 bg-black/20 text-white cursor-pointer"
-            >
-              <BsChevronCompactLeft size={30} />
-            </div>
-            <div
-              onClick={nextService}
-              className="hidden group-hover:block absolute top-[30%] -translate-x-0 -translate-y-[-50%] right-5 text-2xl rounded-full p-1 bg-black/20 text-white cursor-pointer"
-            >
-              <BsChevronCompactRight size={30} />
-            </div>
-          </div>
-        </section>
-      ); 
 }
 
 export function Projects() {}

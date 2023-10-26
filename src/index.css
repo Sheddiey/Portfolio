@@ -12,4 +12,6 @@
   width: 700px;
   height: 400px;
   box-shadow: 0 4px 8px 0 var(--clr-very-dark-grayish-cyan);
+  margin-inline: 30px;
+  padding: 20px;
 }
