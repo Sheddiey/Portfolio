@@ -47,10 +47,6 @@ function NavBar() {
   );
 }
 
-function Main() {
-  return <Home />;
-}
-
 function Footer() {
   return (
     <div className="w-screen h-10">
