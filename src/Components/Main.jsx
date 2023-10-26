@@ -113,8 +113,8 @@ export function Skills() {
 
 export function Projects() {
   return (
-    <div id="projects" className="projects card">
-      <ul>
+    <div id="card " className="projects card">
+      <ul className="lis-none">
         <li>lorem20</li>
         <li>lorem20</li>
         <li>lorem20</li>
