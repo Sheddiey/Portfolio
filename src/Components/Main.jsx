@@ -91,8 +91,8 @@ export function About() {
 export function Skills() {
   return (
     <div className="skills p-5 card" id="skills">
-      <h2>Proficiencies</h2>
-      <ul>
+      <h2 className="text-4xl font-medium">Proficiencies</h2>
+      <ul className="list-none hover:list-disc">
         <li>HTML5</li>
         <li>CSS3</li>
         <li>JavaScript</li>

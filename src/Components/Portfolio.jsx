@@ -1,11 +1,11 @@
 import React from "react";
-import { About, Home } from "./Main";
+import { About, Home, Skills } from "./Main";
 
 export function Portfolio() {
   return (
     <div className=" h-screen flex flex-col justify-between ">
       <NavBar />
-      <About />
+      <Skills />
       <Footer />
     </div>
   );
