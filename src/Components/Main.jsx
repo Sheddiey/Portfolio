@@ -70,8 +70,8 @@ function Socials() {
 
 export function About() {
   return (
-    <div className="about p-2 grid  justify-center card text-center" id="about">
-      <h2>About Me</h2>
+    <div className="card regal-blue p-2 grid gap-5 content-center justify-center card text-center" id="about">
+      <h2 className="font-medium text-4xl">About Me</h2>
       <p>
         I'm an experienced Front-End Developer with a proven track record of
         optimizing codebases for reusability at Milkyway Coop, and I'm eager to
