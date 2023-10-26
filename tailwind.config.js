@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "regal-blue": "hsl(0, 16%, 92%)",
+        teal: "#ff0000",
       },
     },
   },

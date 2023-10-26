@@ -5,10 +5,8 @@ import {
   faLinkedinIn,
   faWhatsapp,
   faGithub,
-  faPhone,
-  faEnvelope,
-  faLocationDot
 } from "@fortawesome/free-brands-svg-icons";
+import { faPhone, faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 export function Main() {}
 
@@ -129,7 +127,7 @@ export function Projects() {
 
 export function ContactMe() {
   return (
-    <div className="contact-me  p-5 grid md:flex card" id="contact-me">
+    <div className="card items-center justify-evenly p-5 grid md:flex card" id="contact-me">
       <div className=" contact-left order-last grid gap-5">
         <p>
           <span>
@@ -151,19 +149,19 @@ export function ContactMe() {
         </p>
       </div>
       <div className="contact-right md:gap-5 grid gap-2">
-        <label>
+        <label className="grid">
           Full Name:
-          <input placeholder="Full name" />
+          <input className="p-1 rounded focus:border-0" placeholder="Full name" />
         </label>
-        <label>
+        <label className="grid">
           Email:
-          <input placeholder="Email" />
+          <input className="p-1 rounded focus:border-0" placeholder="Email" />
         </label>
-        <label>
+        <label className="grid">
           What type of website do you need?
-          <input placeholder="Provide a brief description..." />
+          <input className="p-1 rounded focus:border-0" placeholder="Provide a brief description..." />
         </label>
-        <button className="button">Send Message</button>
+        <button className="button uppercase">Send Message</button>
       </div>
     </div>
   );
