@@ -21,6 +21,7 @@ body {
   background-color: hsl(0, 16%, 92%);
 }
 .button {
+  color: white;
   border-radius: 100vw;
   height: max-content;
   width: max-content;
@@ -28,7 +29,7 @@ body {
   padding-inline: 10px;
   border: 0;
   cursor: pointer;
-  background-color: hsl(180, 29%, 50%);
+  background-color: rgb(2 132 199);
   transition: transform 0.3s;
   box-shadow: 0px 03px 8px 0px hsl(192, 100%, 9%);
 }
@@ -38,6 +39,8 @@ transform: scale(1.07);
 }
 .button a {
   text-decoration: none;
-  color: hsl(192, 100%, 9%);
+  color: white;
   font-weight: var(--fw-bold);
+
 }
+

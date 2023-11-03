@@ -6,9 +6,12 @@ import {
   faWhatsapp,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPhone,
+  faEnvelope,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
 
-export function Main() {}
 
 export function Home() {
   return (
@@ -16,7 +19,7 @@ export function Home() {
       <section className="order-last md:grid md:content-center md:-order-1">
         <Socials />
       </section>
-      <section className="flex flex-col text-center justify-evenly">
+      <section className="flex flex-col items-center text-center justify-evenly">
         <h2>
           Hello, I am{" "}
           <span className="font-medium text-4xl">Shadrack Cheruiyot</span>{" "}
@@ -42,15 +45,21 @@ export function Home() {
 
 function Socials() {
   return (
-    <ul className="gap-10 md:grid flex list-none justify-center">
+    <ul className="gap-10 md:grid text-2xl flex list-none justify-center">
       <li>
         <a target="blank" href='https://twitter.com/sheddieynext"'>
-          <FontAwesomeIcon className="icon" icon={faXTwitter} />
+          <FontAwesomeIcon
+            className="icon  hover:text-sky-600"
+            icon={faXTwitter}
+          />
         </a>
       </li>
       <li>
         <a target="blank" href="https://www.linkedin.com/in/sheddiey/">
-          <FontAwesomeIcon className="icon" icon={faLinkedinIn} />
+          <FontAwesomeIcon
+            className="icon  hover:text-sky-600"
+            icon={faLinkedinIn}
+          />
         </a>
       </li>
       <li>
@@ -58,12 +67,18 @@ function Socials() {
           target="blank"
           href="https://api.whatsapp.com/send?phone=254711241878"
         >
-          <FontAwesomeIcon className="icon" icon={faWhatsapp} />
+          <FontAwesomeIcon
+            className="icon  hover:text-sky-600"
+            icon={faWhatsapp}
+          />
         </a>
       </li>
       <li>
         <a target="blank" href="https://github.com/Sheddiey">
-          <FontAwesomeIcon className="icon" icon={faGithub} />
+          <FontAwesomeIcon
+            className="icon  hover:text-sky-600"
+            icon={faGithub}
+          />
         </a>
       </li>
     </ul>
@@ -105,7 +120,7 @@ export function Skills() {
         <li>Web Accessibility</li>
         <li>Front-end Frameworks - React</li>
         <li>Version Control - Git</li>
-        <li>CSS Frameworks - Bootstrap</li>
+        <li>CSS Frameworks - Tailwind CSS</li>
         <li>Mobile-First Development</li>
       </ul>
     </div>
@@ -127,7 +142,10 @@ export function Projects() {
 
 export function ContactMe() {
   return (
-    <div className="card items-center justify-evenly p-5 grid md:flex card" id="contact-me">
+    <div
+      className="card items-center justify-evenly p-5 grid md:flex card"
+      id="contact-me"
+    >
       <div className=" contact-left order-last grid gap-5">
         <p>
           <span>
@@ -151,7 +169,10 @@ export function ContactMe() {
       <div className="contact-right md:gap-5 grid gap-2">
         <label className="grid">
           Full Name:
-          <input className="p-1 rounded focus:border-0" placeholder="Full name" />
+          <input
+            className="p-1 rounded focus:border-0"
+            placeholder="Full name"
+          />
         </label>
         <label className="grid">
           Email:
@@ -159,7 +180,10 @@ export function ContactMe() {
         </label>
         <label className="grid">
           What type of website do you need?
-          <input className="p-1 rounded focus:border-0" placeholder="Provide a brief description..." />
+          <input
+            className="p-1 rounded focus:border-0"
+            placeholder="Provide a brief description..."
+          />
         </label>
         <button className="button uppercase">Send Message</button>
       </div>
