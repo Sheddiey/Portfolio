@@ -20,6 +20,12 @@ body {
   padding: 20px;
   background-color: hsl(0, 16%, 92%);
 }
+@media (max-width: 768px) {
+  .card {
+    width: 360px;
+    outline: 2px solid red;
+  }
+}
 .button {
   color: white;
   border-radius: 100vw;
