@@ -14,9 +14,9 @@ import { faDownload, faBars, faX } from "@fortawesome/free-solid-svg-icons";
 export function Portfolio() {
   return (
     <Router>
-      <div className=" h-screen flex flex-col justify-between ">
+      <div className=" md:h-screen flex flex-col justify-between ">
         <NavBar />
-        <div className="md:flex grid gap-10">
+        <div className="md:flex justify-center grid gap-10">
           <Routes>
             <Route path="/" Component={Home} />
             <Route path="/about" Component={About} />
@@ -41,44 +41,49 @@ function NavBar() {
       <h2 className="cursor-pointer font-bold hover:text-2xl hover:transition hover:delay-150 duration-300 ease-in-out">
         <Link to="/">Sheddiey</Link>
       </h2>
-      <ul className="md:flex hidden cursor-pointer md:gap-5">
-        <li>
-          <Link className="hover:text-sky-600" to="/">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link className="hover:text-sky-600" to="/about">
-            About
-          </Link>
-        </li>
-        <li>
-          <Link className="hover:text-sky-600" to="/skills">
-            Skills
-          </Link>
-        </li>
-        <li>
-          <Link className="hover:text-sky-600" to="/projects">
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link className="hover:text-sky-600" to="/contactMe">
-            Contact Me
-          </Link>
-        </li>
-      </ul>
-      <div className="md:hidden">
-        <ToggleButton isToggle={isToggle} />
+      <div className={`right-0 ${isToggle ? '' : 'hidden'} md:hidden top-0 shadow-[0_5px_700px_0_rgb(0,0,0)] h-screen z-10 absolute w-60 bg-white`}>
+        <ul className="md:flex  md:relative top-20 absolute p-3 grid gap-5 text-2xl md:text-xl cursor-pointer md:gap-5">
+          <li>
+            <Link className="hover:text-sky-600" to="/">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link className="hover:text-sky-600" to="/about">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link className="hover:text-sky-600" to="/skills">
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link className="hover:text-sky-600" to="/projects">
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link className="hover:text-sky-600" to="/contactMe">
+              Contact Me
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <div className="md:hidden z-10">
+        <ToggleButton isToggle={isToggle} setIsToggle={setIsToggle} />
       </div>
     </nav>
   );
 }
 
-function ToggleButton({ isToggle }) {
+function ToggleButton({ isToggle, setIsToggle }) {
+  function handleClick() {
+    setIsToggle(!isToggle)
+  }
   return (
-    <button>
-      {isToggle ? (
+    <button onClick={handleClick} className="z-20">
+      {!isToggle ? (
         <FontAwesomeIcon icon={faBars} />
       ) : (
         <FontAwesomeIcon icon={faX} />
@@ -89,7 +94,7 @@ function ToggleButton({ isToggle }) {
 
 function Footer() {
   return (
-    <div className="w-screen h-10">
+    <div className="w-screen absolute md:relative bottom-0 h-10">
       <p className="text-center cursor-pointer transition- opacity-50 hover:opacity-100 transition-opacity">
         © Sheddiey 2023. All rights reserved.
       </p>
@@ -99,9 +104,9 @@ function Footer() {
 
 function Avatar() {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex items-center flex-col gap-10">
       <img
-        className="h-80 hover:shadow-[0-3px-8px-0_ hsl(192, 100%, 9%)] cursor-pointer w-80"
+        className="md:h-80 md:w-80 h-60 w-60 hover:shadow-[0-3px-8px-0_ hsl(192, 100%, 9%)] cursor-pointer w-80"
         src={sheddiey}
         alt="sheddiey"
       />

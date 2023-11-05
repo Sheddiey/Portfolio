@@ -13,17 +13,22 @@ body {
   box-shadow: 0 0 5px 0 black;
 }
 .card{
-  width: 700px;
-  height: 400px;
+  margin-top: 20px;
   box-shadow: 0 4px 8px 0 hsl(180, 14%, 20%);
   margin-inline: 30px;
   padding: 20px;
   background-color: hsl(0, 16%, 92%);
 }
+@media (min-width: 768px) {
+  .card{
+    width: 700px;
+    height: 400px;
+  }
+}
 @media (max-width: 768px) {
   .card {
-    width: 360px;
-    outline: 2px solid red;
+    min-width: 360px;
+    height: 450px;
   }
 }
 .button {

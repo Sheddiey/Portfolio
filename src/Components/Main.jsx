@@ -15,7 +15,7 @@ import {
 
 export function Home() {
   return (
-    <div className="card regal-blue flex gap-5" id="main">
+    <div className="card regal-blue grid md:flex gap-5" id="main">
       <section className="order-last md:grid md:content-center md:-order-1">
         <Socials />
       </section>
