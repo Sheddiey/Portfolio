@@ -22,7 +22,7 @@ export function Home() {
       <section className="flex flex-col items-center text-center justify-evenly">
         <h2>
           Hello, I am{" "}
-          <span className="font-medium cursor-pointer animate-bounce text-4xl">Shadrack Cheruiyot</span>{" "}
+          <span className="font-medium cursor-pointer animate-pulse text-2xl md:text-4xl">Shadrack Cheruiyot</span>{" "}
         </h2>
         <h5>
           I am a passionate front-end developer with a keen eye for design and a
