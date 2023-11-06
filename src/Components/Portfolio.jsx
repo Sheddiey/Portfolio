@@ -14,7 +14,7 @@ import { faDownload, faBars, faX } from "@fortawesome/free-solid-svg-icons";
 export function Portfolio() {
   return (
     <Router>
-      <div className=" md:h-screen flex flex-col justify-between ">
+      <div className="w-screen md:h-screen flex flex-col justify-between ">
         <NavBar />
         <div className="md:flex justify-center grid gap-10">
           <Routes>
@@ -36,51 +36,65 @@ function NavBar() {
   const [isToggle, setIsToggle] = useState(false);
   const location = useLocation();
 
+  function handleClick() {
+    setIsToggle(!isToggle);
+  }
+
   return (
-    <nav className=" flex h-12 regal-blue box-shadow p-3 justify-between">
+    <nav className=" flex w-screen h-12 regal-blue box-shadow p-3 justify-between">
       <h2 className="cursor-pointer font-bold hover:text-2xl hover:transition hover:delay-150 duration-300 ease-in-out">
         <Link to="/">Sheddiey</Link>
       </h2>
-      <div className={`right-0 ${isToggle ? '' : 'hidden'} md:hidden top-0 shadow-[0_5px_700px_0_rgb(0,0,0)] h-screen z-10 absolute w-60 bg-white`}>
-        <ul className="md:flex  md:relative top-20 absolute p-3 grid gap-5 text-2xl md:text-xl cursor-pointer md:gap-5">
-          <li>
-            <Link className="hover:text-sky-600" to="/">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:text-sky-600" to="/about">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:text-sky-600" to="/skills">
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:text-sky-600" to="/projects">
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:text-sky-600" to="/contactMe">
-              Contact Me
-            </Link>
-          </li>
+      <div
+        className={`right-0  ${
+          isToggle ? "w-60" : "w-0 overflow-hidden"
+        } md:shadow-none md:bg-transparent transform transition-width duration-300 ease-in-out top-0 shadow-[0_5px_700px_0_rgb(0,0,0)] h-screen z-10 absolute w-60 bg-white`}
+      >
+        <ul className="md:flex md:top-0 md:right-0 top-20 absolute p-3 grid gap-5  cursor-pointer md:gap-5">
+          {NavList["nav-list"].map((list) => (
+            <li key={list.p}>
+              <Link onClick={handleClick} className="border-b-4 hover:text-sky-600" to={list.to}>
+                {list.p}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="md:hidden z-10">
-        <ToggleButton isToggle={isToggle} setIsToggle={setIsToggle} />
+        <ToggleButton isToggle={isToggle} handleClick={handleClick} />
       </div>
     </nav>
   );
 }
 
-function ToggleButton({ isToggle, setIsToggle }) {
-  function handleClick() {
-    setIsToggle(!isToggle)
-  }
+const NavList = {
+  "nav-list": [
+    {
+      to: "/",
+      p: "Home",
+    },
+    {
+      to: "/about",
+      p: "About",
+    },
+    {
+      to: "/skills",
+      p: "Skills",
+    },
+    {
+      to: "/projects",
+      p: "Projects",
+    },
+
+    {
+      to: "/contactMe",
+      p: "ContactMe",
+    },
+  ],
+};
+
+function ToggleButton({ isToggle, handleClick }) {
+  
   return (
     <button onClick={handleClick} className="z-20">
       {!isToggle ? (
@@ -104,7 +118,7 @@ function Footer() {
 
 function Avatar() {
   return (
-    <div className="flex items-center flex-col gap-10">
+    <div className="flex items-center flex-col gap-5 md:gap-10">
       <img
         className="md:h-80 md:w-80 h-60 w-60 hover:shadow-[0-3px-8px-0_ hsl(192, 100%, 9%)] cursor-pointer w-80"
         src={sheddiey}
