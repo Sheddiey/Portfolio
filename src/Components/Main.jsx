@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import emailjs from "@emailjs/browser";
 import {
   faXTwitter,
   faLinkedinIn,
@@ -12,7 +13,6 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 
-
 export function Home() {
   return (
     <div className="card regal-blue grid md:flex gap-5" id="main">
@@ -22,7 +22,9 @@ export function Home() {
       <section className="flex flex-col items-center text-center justify-evenly">
         <h2>
           Hello, I am{" "}
-          <span className="font-medium cursor-pointer animate-pulse text-2xl md:text-4xl">Shadrack Cheruiyot</span>{" "}
+          <span className="font-medium cursor-pointer animate-pulse text-2xl md:text-4xl">
+            Shadrack Cheruiyot
+          </span>{" "}
         </h2>
         <h5>
           I am a passionate front-end developer with a keen eye for design and a
@@ -166,27 +168,67 @@ export function ContactMe() {
           Remote{" "}
         </p>
       </div>
-      <div className="contact-right md:gap-5 grid gap-2">
-        <label className="grid">
-          Full Name:
-          <input
-            className="p-1 rounded focus:border-0"
-            placeholder="Full name"
-          />
-        </label>
-        <label className="grid">
-          Email:
-          <input className="p-1 rounded focus:border-0" placeholder="Email" />
-        </label>
-        <label className="grid">
-          What type of website do you need?
-          <input
-            className="p-1 rounded focus:border-0"
-            placeholder="Provide a brief description..."
-          />
-        </label>
-        <button className="button uppercase">Send Message</button>
-      </div>
+      <Form />
     </div>
+  );
+}
+
+function Form() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_5kq3b2l",
+        "template_ftf88vs",
+        form.current,
+        "s1QzsaEZUoxbOStqi"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert('message sent');
+        },
+        (error) => {
+          console.log(error.text);
+          alert('Message not sent! Try again.')
+        }
+      );
+  };
+  return (
+    <form className="contact-right md:gap-5 grid gap-2" ref={form} onSubmit={sendEmail}>
+      <label className="grid">
+        Full Name:
+        <input
+          className="p-1 outline-cyan-500"
+          placeholder="Full name"
+          name="user_name"
+          required
+        />
+      </label>
+      <label className="grid">
+        Email:
+        <input
+          className="p-1 outline-cyan-500  invalid:outline-pink-500"
+          type="email"
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+          placeholder="Email"
+          name="user_email"
+          required
+        />
+      </label>
+      <label className="grid">
+        What type of website do you need?
+        <input
+          className="p-1 outline-cyan-500"
+          placeholder="Provide a brief description..."
+          name="message"
+          required
+        />
+      </label>
+      <input type="submit" className="button uppercase" value="Send Message" />
+    </form>
   );
 }
