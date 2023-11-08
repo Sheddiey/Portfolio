@@ -55,3 +55,9 @@ transform: scale(1.07);
 
 }
 
+
+.socials li {
+  height: 30px;
+  width: 28px;
+}
+

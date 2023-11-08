@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import { About, ContactMe, Home, Projects, Skills } from "./Main";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Link,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import sheddiey from "./sheddie ed.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faBars, faX } from "@fortawesome/free-solid-svg-icons";
@@ -34,8 +28,6 @@ export function Portfolio() {
 
 function NavBar() {
   const [isToggle, setIsToggle] = useState(false);
-  const location = useLocation();
-
   function handleClick() {
     setIsToggle(!isToggle);
   }
@@ -46,14 +38,18 @@ function NavBar() {
         <Link to="/">Sheddiey</Link>
       </h2>
       <div
-        className={`right-0  ${
-          isToggle ? "w-60" : "w-0 overflow-hidden"
-        } md:shadow-none md:bg-transparent transform transition-width duration-300 ease-in-out top-0 shadow-[0_5px_700px_0_rgb(0,0,0)] h-screen z-10 absolute w-60 bg-white`}
+        className={`right-0 w-${
+          isToggle ? "60" : "0"
+        } md:overflow-visible overflow-hidden md:shadow-none md:bg-transparent transform transition-width duration-300 ease-in-out top-0 shadow-[0_5px_700px_0_rgb(0,0,0)] h-screen z-10 absolute bg-white`}
       >
         <ul className="md:flex md:top-0 md:right-0 top-20 absolute p-3 grid gap-5  cursor-pointer md:gap-5">
           {NavList["nav-list"].map((list) => (
             <li key={list.p}>
-              <Link onClick={handleClick} className="border-b-4 hover:text-sky-600" to={list.to}>
+              <Link
+                onClick={handleClick}
+                className="border-b-4 hover:text-sky-600"
+                to={list.to}
+              >
                 {list.p}
               </Link>
             </li>
@@ -94,7 +90,6 @@ const NavList = {
 };
 
 function ToggleButton({ isToggle, handleClick }) {
-  
   return (
     <button onClick={handleClick} className="z-20">
       {!isToggle ? (
@@ -108,7 +103,7 @@ function ToggleButton({ isToggle, handleClick }) {
 
 function Footer() {
   return (
-    <div className="w-screen  md:relative bottom-0 h-10">
+    <div className="w-screen absolute md:relative bottom-0 h-10">
       <p className="text-center cursor-pointer transition- opacity-50 hover:opacity-100 transition-opacity">
         © Sheddiey 2023. All rights reserved.
       </p>

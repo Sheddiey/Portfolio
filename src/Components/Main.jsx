@@ -45,19 +45,19 @@ export function Home() {
 
 function Socials() {
   return (
-    <ul className="gap-10 md:grid text-2xl flex list-none justify-center">
+    <ul className="gap-10 socials md:grid text-2xl flex list-none justify-center">
       <li>
         <a target="blank" href='https://twitter.com/sheddieynext"'>
           <FontAwesomeIcon
-            className="icon  hover:text-sky-600"
+            className="icon transition-color group duration-300 ease-in-out hover:text-3xl hover:text-sky-600"
             icon={faXTwitter}
           />
         </a>
       </li>
-      <li>
+      <li className="">
         <a target="blank" href="https://www.linkedin.com/in/sheddiey/">
           <FontAwesomeIcon
-            className="icon  hover:text-sky-600"
+            className="icon transition-color group duration-300 ease-in-out hover:text-3xl  hover:text-sky-600"
             icon={faLinkedinIn}
           />
         </a>
@@ -68,7 +68,7 @@ function Socials() {
           href="https://api.whatsapp.com/send?phone=254711241878"
         >
           <FontAwesomeIcon
-            className="icon  hover:text-sky-600"
+            className="icon transition-color group duration-300 ease-in-out hover:text-3xl hover:text-sky-600"
             icon={faWhatsapp}
           />
         </a>
@@ -76,7 +76,7 @@ function Socials() {
       <li>
         <a target="blank" href="https://github.com/Sheddiey">
           <FontAwesomeIcon
-            className="icon  hover:text-sky-600"
+            className="icon transition-color group duration-300 ease-in-out hover:text-3xl hover:text-sky-600"
             icon={faGithub}
           />
         </a>
