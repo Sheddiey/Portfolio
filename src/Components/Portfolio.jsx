@@ -18,6 +18,7 @@ export function Portfolio() {
             <Route path="/projects" Component={Projects} />
             <Route path="/contactMe" Component={ContactMe} />
           </Routes>
+
           <Avatar />
         </div>
         <Footer />
