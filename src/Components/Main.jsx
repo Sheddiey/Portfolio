@@ -129,18 +129,6 @@ export function Skills() {
   );
 }
 
-export function Projects() {
-  return (
-    <div id="card " className="projects card">
-      <ul className="lis-none">
-        <li>lorem20</li>
-        <li>lorem20</li>
-        <li>lorem20</li>
-        <li>lorem20</li>
-      </ul>
-    </div>
-  );
-}
 
 export function ContactMe() {
   return (

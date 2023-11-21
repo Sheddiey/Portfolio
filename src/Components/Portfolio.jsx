@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { About, ContactMe, Home, Projects, Skills } from "./Main";
+import { About, ContactMe, Home, Skills } from "./Main";
+
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import sheddiey from "./sheddie ed.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faBars, faX } from "@fortawesome/free-solid-svg-icons";
+import Projects from "./Projects/Projects";
 
 export function Portfolio() {
   return (
