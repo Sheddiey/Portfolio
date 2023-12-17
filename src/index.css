@@ -7,7 +7,7 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 .regal-blue {
-  /* background-color: hsl(0, 16%, 92%); */
+  background-color: hsl(0, 16%, 92%);
 }
 .box-shadow {
   box-shadow: 0 0 5px 0 black;
@@ -17,7 +17,7 @@ body {
   box-shadow: 0 4px 8px 0 hsl(180, 14%, 20%);
   margin-inline: 30px;
   padding: 20px;
-  /* background-color: hsl(0, 16%, 92%); */
+  background-color: hsl(0, 16%, 92%);
 }
 @media (min-width: 768px) {
   .card{

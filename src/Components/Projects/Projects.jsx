@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.scss";
-import Oningoi_img from "../sheddie ed.jpg";
+import Oningoi_img from "../Assets/sheddie ed.jpg";
 
 const Projects = () => {
   const settings = {

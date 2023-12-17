@@ -1,5 +1,5 @@
-import { Portfolio } from "./Components/Portfolio";
 import React from "react";
+import Portfolio from '../src/Components/Portfolio/Portfolio'
 
 function App() {
   return (
