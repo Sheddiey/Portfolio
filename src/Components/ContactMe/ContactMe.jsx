@@ -4,10 +4,10 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 
-const ContactMe = () => {
+const ContactMe = ({contactMeClass}) => {
   return (
     <div
-      className="card items-center justify-evenly p-5 grid md:flex card"
+      className={contactMeClass}
       id="contact-me"
     >
       <div className=" contact-left order-last grid gap-5">

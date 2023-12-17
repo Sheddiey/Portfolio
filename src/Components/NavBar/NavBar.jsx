@@ -1,20 +1,20 @@
-import { faBars, faMoon, faX } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faMoon, faSun, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar = ({toggleDarkMode, navBarClass, isDarkMode}) => {
     const [isToggle, setIsToggle] = useState(false);
     function handleClick() {
       setIsToggle(!isToggle);
     }
   
     return (
-      <nav className=" flex w-screen h-12 regal-blue box-shadow p-3 justify-between">
-        <h2 className="cursor-pointer font-bold hover:text-2xl hover:transition hover:delay-150 duration-300 ease-in-out">
+      <nav className={navBarClass}>
+        <h2 className="cursor-pointer font-bold hover:text-xl hover:transition hover:delay-150 duration-300 ease-in-out">
           <Link to="/">Sheddiey</Link>
         </h2>
-        <FontAwesomeIcon icon={faMoon} className="absolute left-[50%] text-[20px]"/>
+        <FontAwesomeIcon onClick={toggleDarkMode} icon={!isDarkMode ? faMoon : faSun} className="absolute left-[50%] text-[20px] cursor-pointer"/>
         <div
           className={`right-0 w-${
             isToggle ? "60" : "0"
@@ -25,7 +25,7 @@ const NavBar = () => {
               <li key={list.p}>
                 <Link
                   onClick={handleClick}
-                  className="border-b-4 hover:text-sky-600"
+                  className="hover:text-sky-600"
                   to={list.to}
                 >
                   {list.p}

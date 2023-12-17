@@ -7,9 +7,9 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
-export function Home() {
+export function Home({homeClass}) {
   return (
-    <div className="card regal-blue grid md:flex gap-5" id="main">
+    <div className={homeClass} id="main">
       <section className="order-last md:grid md:content-center md:-order-1">
         <Socials />
       </section>
@@ -81,10 +81,10 @@ function Socials() {
   );
 }
 
-export function About() {
+export function About({aboutClass}) {
   return (
     <div
-      className="card regal-blue p-2 grid gap-5 content-center justify-center card text-center"
+      className={aboutClass}
       id="about"
     >
       <h2 className="font-medium text-4xl">About Me</h2>
@@ -104,9 +104,9 @@ export function About() {
   );
 }
 
-export function Skills() {
+export function Skills({skillsClass}) {
   return (
-    <div className="skills p-5 card" id="skills">
+    <div className={skillsClass} id="skills">
       <h2 className="text-4xl font-medium">Proficiencies</h2>
       <ul className="list-none hover:list-disc">
         <li>HTML5</li>

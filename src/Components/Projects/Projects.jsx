@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.scss";
 import Oningoi_img from "../Assets/sheddie ed.jpg";
 
-const Projects = () => {
+const Projects = ({projectsClass}) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -14,7 +14,7 @@ const Projects = () => {
   };
 
   return (
-    <Slider className="card" {...settings}>
+    <Slider className={projectsClass} {...settings}>
       {projects.map((project, index) => (
         <div key={index}>
           <img className="h-[250px] w-[200px]" src={Oningoi_img} alt={project.title} />
