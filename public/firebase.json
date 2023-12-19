@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "sheddiey-terrific",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
