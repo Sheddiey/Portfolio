@@ -26,7 +26,7 @@ export function Home({homeClass}) {
           enjoy turning ideas into reality through code and bringing responsive
           designs to life.
         </h5>
-        <button className="button">
+        <button className="button animate-bounce">
           <a
             target="blank"
             href="https://api.whatsapp.com/send?phone=254711241878"

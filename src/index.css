@@ -22,9 +22,7 @@ body {
   /* background-color: hsl(0, 16%, 92%); */
   background-color: hsl(37, 58%, 77%);
 }
-.card-dark-theme{
-  
-}
+
 .dark-theme{
   background-color: hsl(207, 26%, 13%);
   color: white;
@@ -59,7 +57,7 @@ body {
   cursor: pointer;
   background-color: rgb(2 132 199);
   transition: transform 0.3s;
-  box-shadow: 0px 03px 8px 0px hsl(192, 100%, 9%);
+  box-shadow: 0px 03px 8px 0px hsl(0, 0%, 0%);
 }
 .button:hover,
 .button:focus {
@@ -72,6 +70,10 @@ transform: scale(1.07);
 
 }
 
+.underline {
+  text-decoration: underline;
+  outline: 2px solid red;
+}
 
 .socials li {
   height: 30px;
