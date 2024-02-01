@@ -112,3 +112,12 @@ transform: scale(1.07);
   border-bottom-color: red;
 }
 
+.slick-arrow.slick-next,
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next:hover,
+.slick-arrow.slick-prev:hover  {
+  background-color: hsl(207, 26%, 13%);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
