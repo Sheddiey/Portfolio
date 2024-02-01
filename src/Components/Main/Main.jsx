@@ -7,13 +7,13 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
-export function Home({homeClass}) {
+export function Home({ homeClass }) {
   return (
     <div className={homeClass} id="main">
       <section className="order-last md:grid md:content-center md:-order-1">
         <Socials />
       </section>
-      <section className="flex flex-col items-center text-center justify-evenly">
+      <section className="flex flex-col items-center md:text-center justify-evenly">
         <h2>
           Hello, I am{" "}
           <span className="font-medium cursor-pointer animate-pulse text-2xl md:text-4xl">
@@ -21,12 +21,14 @@ export function Home({homeClass}) {
           </span>{" "}
         </h2>
         <h5>
-          I am a passionate front-end developer with a keen eye for design and a
-          love for creating user-friendly, visually appealing web experiences. I
-          enjoy turning ideas into reality through code and bringing responsive
-          designs to life.
+          I'm a web developer, passionate about crafting accessible and
+          user-friendly websites. With expertise in React for dynamic interfaces
+          and Tailwind CSS for sleek designs, I ensure your site looks great on
+          any device. Leveraging Git for collaboration and Firebase for backend
+          needs, I'm committed to delivering top-notch web solutions. I am
+          seeking a full-time position as a Front-end Web Developer.
         </h5>
-        <button className="button animate-bounce">
+        <button className="button mt-[15px] animate-bounce">
           <a
             target="blank"
             href="https://api.whatsapp.com/send?phone=254711241878"
@@ -81,30 +83,7 @@ function Socials() {
   );
 }
 
-export function About({aboutClass}) {
-  return (
-    <div
-      className={aboutClass}
-      id="about"
-    >
-      <h2 className="font-medium text-4xl">About Me</h2>
-      <p>
-        I'm an experienced Front-End Developer with a proven track record of
-        optimizing codebases for reusability at Milkyway Coop, and I'm eager to
-        apply my skills to a larger development team at TnC. My passion for
-        learning and solving complex problems drives me to maximize user
-        efficiency. With a keen eye for design and a love for creating visually
-        appealing, user-friendly web experiences, I turn ideas into reality
-        through code. My mission is to continuously find innovative ways to
-        enhance the digital world and make the web a more beautiful and
-        functional place. I'm excited to connect with like-minded individual's
-        and explore new opportunities for collaboration.
-      </p>
-    </div>
-  );
-}
-
-export function Skills({skillsClass}) {
+export function Skills({ skillsClass }) {
   return (
     <div className={skillsClass} id="skills">
       <h2 className="text-4xl font-medium">Proficiencies</h2>
@@ -118,11 +97,8 @@ export function Skills({skillsClass}) {
         <li>Version Control - Git</li>
         <li>CSS Frameworks - Tailwind CSS</li>
         <li>Mobile-First Development</li>
+        <li>Firebase for backend solutions</li>
       </ul>
     </div>
   );
 }
-
-
-
-

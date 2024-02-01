@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { About, Home, Skills } from "../Main/Main";
+import { Home, Skills } from "../Main/Main";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ContactMe from "../ContactMe/ContactMe";
 import NavBar from "../NavBar/NavBar";
@@ -13,9 +13,7 @@ const Portfolio = () => {
   const homeClass = `card regal-blue grid md:flex gap-5 ${
     isDarkMode ? "dark-theme" : ""
   }`;
-  const aboutClass = `regal-blue p-2 grid gap-5 content-center justify-center card text-center ${
-    isDarkMode ? "dark-theme" : ""
-  }`;
+
   const skillsClass = `skills p-5 card ${isDarkMode ? "dark-theme" : ""}`;
   const contactMeClass = `card items-center justify-evenly p-5 grid md:flex ${
     isDarkMode ? "dark-theme" : ""
@@ -37,10 +35,9 @@ const Portfolio = () => {
           isDarkMode={isDarkMode}
           navBarClass={navBarClass}
         />
-        <div className="md:flex justify-center grid gap-10">
+        <div className="lg:flex justify-center grid gap-10 ">
           <Routes>
             <Route path="/" element={<Home homeClass={homeClass} />} />
-            <Route path="/about" element={<About aboutClass={aboutClass} />} />
             <Route
               path="/skills"
               element={<Skills skillsClass={skillsClass} />}

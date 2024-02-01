@@ -5,11 +5,11 @@
 
 body {
   font-family: 'Roboto Slab', serif;
-  background-color: hsla(37, 58%, 77%, 0.849);
+  background-color: hsl(0, 0%, 100%);
 }
 .regal-blue {
-  /* background-color: hsl(0, 16%, 92%); */
-  background-color: hsl(37, 58%, 77%);
+  background-color: hsl(0, 16%, 92%);
+  /* background-color: hsl(37, 58%, 77%); */
 }
 .box-shadow {
   box-shadow: 0 0 5px 0 black;
@@ -19,8 +19,8 @@ body {
   box-shadow: 0 4px 8px 0 hsl(0, 0%, 1%);
   margin-inline: 30px;
   padding: 20px;
-  /* background-color: hsl(0, 16%, 92%); */
-  background-color: hsl(37, 58%, 77%);
+  background-color: hsl(0, 16%, 92%);
+  /* background-color: hsl(37, 58%, 77%); */
 }
 
 .dark-theme{
@@ -69,13 +69,46 @@ transform: scale(1.07);
   font-weight: var(--fw-bold);
 
 }
-
-.underline {
-  text-decoration: underline;
-  outline: 2px solid red;
-}
-
 .socials li {
   height: 30px;
   width: 28px;
 }
+
+
+.nav-link {
+  position: relative;
+  font-weight: 600;
+}
+
+
+
+.nav-link::before,
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; 
+  width: 50%; 
+  border-bottom: 2px solid transparent; 
+  transition: width 0.3s ease;
+}
+
+.nav-link::before {
+  left: 0;
+}
+
+.nav-link::after {
+  right: 0;
+}
+
+.active::before,
+.active::after {
+  width: 50%; 
+  border-bottom-color: red;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+  width: 0;
+  border-bottom-color: red;
+}
+

@@ -7,7 +7,7 @@ const Avatar = () => {
   return (
     <div className="flex items-center flex-col gap-5 md:gap-10">
     <img
-      className="md:h-80 md:w-80 h-60 w-60 hover:shadow-[0-3px-8px-0_ hsl(192, 100%, 9%)] cursor-pointer w-80"
+      className="lg:h-80 w-[85%] lg:mt-[20px] h-[60%] lg:w-80 h-60 w-60 hover:shadow-[0-3px-8px-0_ hsl(192, 100%, 9%)] cursor-pointer w-80"
       src={sheddiey}
       alt="sheddiey"
     />
