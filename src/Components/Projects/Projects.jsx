@@ -62,7 +62,6 @@ const Projects = ({ projectsClass }) => {
             />
           </a>
           <a href="https://github.com/Sheddiey/xpenditure" target="blank">
-            {" "}
             <FontAwesomeIcon
               className="cursor-pointer hover:text-[#0284c7] transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110  duration-300"
               icon={faGithub}
@@ -86,7 +85,7 @@ const Projects = ({ projectsClass }) => {
         <p className="text-[10px] mt-[5px]">
           Sticker Shop, an e-commerce site, utilizes React and CSS for an
           engaging sticker shopping experience, featuring easy cart management
-          and real-time cost updates for users to explore and enjoy.
+          and real-time cost updates for users to explore.
         </p>
         <div className="flex justify-between duration-300 px-[100px] md:px-[250px] text-[20px]">
           <a href="https://oningoi-e-commerce.web.app/" target="blank">

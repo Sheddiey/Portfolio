@@ -3,7 +3,7 @@ import sheddiey from "../Assets/sheddie ed.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { Tooltip } from "react-tippy";
-import 'react-tippy/dist/tippy.css';
+import "react-tippy/dist/tippy.css";
 
 const Avatar = () => {
   return (
@@ -21,10 +21,16 @@ const Avatar = () => {
           arrow={true}
           interactive={true}
         >
-          <FontAwesomeIcon
-            className="icon text-2xl hover:text-sky-600 cursor-pointer"
-            icon={faDownload}
-          />
+          <a
+            href="https://drive.google.com/file/d/1c20AJZLGYkC9nMAqsabYm3Zu8C6rnbww/view?usp=drive_link"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              className="icon text-2xl hover:text-sky-600 cursor-pointer"
+              icon={faDownload}
+            />
+          </a>
         </Tooltip>
       </div>
     </div>
