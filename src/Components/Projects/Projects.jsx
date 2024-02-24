@@ -8,6 +8,8 @@ import fintrack_e from "../Assets/1-f.png";
 import fintrackPhone from "../Assets/fintrackPhone.png";
 import oningoiDecalsPhone from "../Assets/oningoiDecalsPhone.png";
 import restApiPhone from "../Assets/restApiPhone.png";
+import landingPhone from "../Assets/landing_phone.png";
+import landingDesktop from "../Assets/landingDesktop.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -39,29 +41,30 @@ const Projects = ({ projectsClass }) => {
   return (
     <Slider className={projectsClass} {...settings}>
       <div>
-        <h3 className="font-semibold text-center mb-[5px]">FinTrack</h3>
+        <h3 className="font-semibold text-center mb-[5px]">
+          Manage landing page
+        </h3>
         {isSmallScreen ? (
           <img
             className="h-[320px] w-[80%] mx-[auto]"
-            src={fintrackPhone}
+            src={landingPhone}
             alt=""
           />
         ) : (
-          <img className="h-[280px] mx-[auto]" src={fintrack_e} alt="" />
+          <img className="h-[280px] mx-[auto]" src={landingDesktop} alt="" />
         )}
         <p className="text-[10px] mt-[5px]">
-          The monthly tracker web app uses React with Tailwind CSS for frontend
-          design and Firebase for backend services, enabling user
-          authentication, data storage, and management.
+          Simple, modern & responsive landing page built with React & Tailwind
+          CSS showcasing a task management app.
         </p>
         <div className="flex justify-between duration-300 px-[100px] md:px-[250px] text-[20px]">
-          <a href="https://xpenditure-af200.web.app/" target="blank">
+          <a href="https://landing-page-8cb34.web.app/" target="blank">
             <FontAwesomeIcon
               className="cursor-pointer hover:text-[#0284c7]  transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110  duration-300"
               icon={faEye}
             />
           </a>
-          <a href="https://github.com/Sheddiey/xpenditure" target="blank">
+          <a href="https://github.com/Sheddiey/Landing-page" target="blank">
             <FontAwesomeIcon
               className="cursor-pointer hover:text-[#0284c7] transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110  duration-300"
               icon={faGithub}
@@ -98,6 +101,37 @@ const Projects = ({ projectsClass }) => {
             href="https://github.com/Sheddiey/ecommerce-project"
             target="blank"
           >
+            <FontAwesomeIcon
+              className="cursor-pointer hover:text-[#0284c7] transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110  duration-300"
+              icon={faGithub}
+            />
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3 className="font-semibold text-center mb-[5px]">FinTrack</h3>
+        {isSmallScreen ? (
+          <img
+            className="h-[320px] w-[80%] mx-[auto]"
+            src={fintrackPhone}
+            alt=""
+          />
+        ) : (
+          <img className="h-[280px] mx-[auto]" src={fintrack_e} alt="" />
+        )}
+        <p className="text-[10px] mt-[5px]">
+          The monthly tracker web app uses React with Tailwind CSS for frontend
+          design and Firebase for backend services, enabling user
+          authentication, data storage, and management.
+        </p>
+        <div className="flex justify-between duration-300 px-[100px] md:px-[250px] text-[20px]">
+          <a href="https://xpenditure-af200.web.app/" target="blank">
+            <FontAwesomeIcon
+              className="cursor-pointer hover:text-[#0284c7]  transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110  duration-300"
+              icon={faEye}
+            />
+          </a>
+          <a href="https://github.com/Sheddiey/xpenditure" target="blank">
             <FontAwesomeIcon
               className="cursor-pointer hover:text-[#0284c7] transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110  duration-300"
               icon={faGithub}
